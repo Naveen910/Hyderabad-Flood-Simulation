@@ -1,7 +1,7 @@
 <script>
-  import Logo from '$lib/assets/dc-logo-no-text.png';
-  import { CircleHelp } from 'lucide-svelte';
-  import { createEventDispatcher } from 'svelte';
+  import Logo from "$lib/assets/dc-logo-no-text.png";
+  import { CircleHelp } from "lucide-svelte";
+  import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
 
@@ -9,8 +9,6 @@
 </script>
 
 <header class="absolute top-0 left-0 right-0 w-full min-h-[60px] p-3 md:p-4">
-
-
   <!-- Water Container Section -->
   <div
     class="flex pointer-events-none justify-center items-center md:ml-0 ml-[72px] relative flex-col gap-2"
@@ -21,7 +19,7 @@
       <h1
         class="font-khand-bold w-[90%] md:text-4xl text-2xl md:text-center font-bold uppercase"
       >
-        Telangana Water Log
+        Hyderabad Flood Simulation
       </h1>
       <p
         class="md:text-sm md:w-full w-[90%] text-xs md:text-center font-semibold"
@@ -53,7 +51,7 @@
     <div class="w-full max-w-[300px] flex justify-end">
       <button
         class="bg-white p-2 rounded-md shadow-md hover:bg-zinc-50 transition-colors duration-200 pointer-events-auto md:absolute md:right-0 md:top-0"
-        on:click={() => dispatch('showMethodology')}
+        on:click={() => dispatch("showMethodology")}
         aria-label="Show methodology"
       >
         <CircleHelp class="w-5 h-5 text-zinc-700" />
@@ -138,7 +136,7 @@
   }
 
   .paper-boat::before {
-    content: '';
+    content: "";
     @apply absolute;
     bottom: 0;
     width: 100%;

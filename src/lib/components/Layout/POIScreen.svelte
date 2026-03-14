@@ -1,10 +1,10 @@
 <script>
-  import { selectedPOI } from '../Map/map';
-  import { ArrowLeftFromLine } from 'lucide-svelte';
-  import { createEventDispatcher } from 'svelte';
+  import { selectedPOI } from "../Map/map";
+  import { ArrowLeftFromLine } from "lucide-svelte";
+  import { createEventDispatcher } from "svelte";
 
-  import LinkPreview from './LinkPreview.svelte';
-  import Frog from '$assets/frog.png';
+  import LinkPreview from "./LinkPreview.svelte";
+  import Frog from "$assets/frog.png";
   export let pois;
   console.log(pois);
   const dispatch = createEventDispatcher();
@@ -25,7 +25,7 @@
     <button
       class=" text-center text-sm w-[7rem] transition-all duration-100 bg-zinc-100 hover:bg-zinc-800 hover:text-white font-bold text-zinc-600 px-4 py-4 rounded-md flex items-center justify-center gap-2"
       on:click={() => {
-        dispatch('back');
+        dispatch("back");
       }}
     >
       <ArrowLeftFromLine class="size-4" />
@@ -71,14 +71,6 @@
       <!-- <Waves class="size-6  text-zinc-400" /> -->
 
       <p class="font-medium text-sm">That's all we've collected for now</p>
-      <div class=" text-center text-xs text-zinc-600">
-        Found another mention? <a
-          class="text-zinc-600 border hover:bg-zinc-200 border-zinc-200 bg-zinc-100 px-2 py-1 rounded-sm transition-colors duration-100"
-          target="_blank"
-          href="https://github.com/diagram-chasing/blr-water-log/issues/new?assignees=&labels=data%2Cflooding-incident&projects=&template=add-flooding-incident.yml&title=Add+Flooding+Incident%3A+{$selectedPOI}"
-          >Contribute</a
-        > to the map.
-      </div>
     </div>
   </div>
 </div>
